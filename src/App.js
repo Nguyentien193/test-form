@@ -350,8 +350,8 @@ const App = () => {
                                   handleInputChange(index, "amount", e);
                                 }}
                                 helpText={
-                                  errors?.amount &&
-                                  errors.amount[index] && (
+                                 (( errors?.amount &&
+                                  errors.amount[index]) || !form.amount) && (
                                     <span style={{ color: "red" }}>
                                       Amount cannot be empty
                                     </span>
